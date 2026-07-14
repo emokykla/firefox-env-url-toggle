@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 12px;
+            font-family: -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            color: #15141a;
+        }
+        fieldset {
+            margin: 0 0 14px;
+            padding: 10px 12px;
+            border: 1px solid #cfcfd8;
+            border-radius: 6px;
+        }
+        .project-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .project-header input {
+            flex: 1;
+            font-weight: 600;
+        }
+        input[type="text"], input[type="url"] {
+            padding: 5px 7px;
+            border: 1px solid #cfcfd8;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .env-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 4px 0;
+        }
+        .env-row input[type="radio"] {
+            margin: 0;
+        }
+        .env-label {
+            width: 110px;
+        }
+        .env-url {
+            flex: 1;
+        }
+        h3 {
+            margin: 10px 0 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #737373;
+        }
+        button {
+            padding: 5px 10px;
+            border: 1px solid #cfcfd8;
+            border-radius: 4px;
+            background: #f0f0f4;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #d7d7db;
+        }
+        button.danger {
+            color: #c50042;
+        }
+        button.primary {
+            background: #0060df;
+            border-color: #0060df;
+            color: #fff;
+        }
+        button.primary:hover {
+            background: #0250bb;
+        }
+        .actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        #status {
+            font-size: 13px;
+        }
+        #status.ok { color: #017a37; }
+        #status.error { color: #c50042; }
+        .hint {
+            margin: 2px 0 10px;
+            font-size: 12px;
+            color: #737373;
+        }
+    </style>
+</head>
+<body>
+    <p class="hint">
+        Each project has <strong>production URLs</strong> and <strong>local URLs</strong>.
+        On a local URL the toolbar icon offers the production list; on a production URL it
+        offers the local list. When the other side has exactly one URL, a single click on
+        the icon switches straight to it without a popup.
+    </p>
+    <div id="projects"></div>
+    <div class="actions">
+        <button id="add-project">+ Add project</button>
+        <button id="save" class="primary">Save</button>
+        <span id="status"></span>
+    </div>
+    <script src="common.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>

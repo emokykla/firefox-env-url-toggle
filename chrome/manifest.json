@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Env URL Toggle",
+  "version": "2.5",
+  "description": "Switch the current tab between configured environment URLs (prod, staging, local dev) per project, preserving the path.",
+  "minimum_chrome_version": "100",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "128": "icon.png"
+    },
+    "default_title": "Env URL Toggle"
+  }
+}

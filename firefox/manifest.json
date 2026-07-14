@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Env URL Toggle",
+  "version": "2.5",
+  "description": "Switch the current tab between configured environment URLs (prod, staging, local dev) per project, preserving the path.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "env-url-toggle@ateitiespamoka.lt",
+      "strict_min_version": "115.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "common.js",
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "128": "icon.png"
+    },
+    "default_title": "Env URL Toggle"
+  }
+}
